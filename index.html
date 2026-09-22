@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="assets/casino-pattern.svg" type="image/x-icon">
+
+    <!-- ! <=====( METADATOS DE PREVISUALIZACIÓN Y SEO )=====> -->
+    <title>Andys de la Suerte - Tu cajera de confianza</title>
+    <meta name="description" content="Atención personalizada las 24 horas. Consultas, soporte y acceso a la plataforma de entretenimiento en un solo lugar.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Andys de la Suerte | Tu cajera de confianza">
+    <meta property="og:description" content="Atención personalizada las 24 hs. Contactate directamente y descubrí la selección del día.">
+    <meta property="og:image" content="img/Title.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Andys de la Suerte | Tu cajera de confianza">
+    <meta name="twitter:description" content="Atención personalizada las 24 hs. Contactate directamente y descubrí la selección del día.">
+    <meta name="twitter:image" content="img/Title.jpg">
+
+    <!-- ! <=====( TIPOGRAFÍAS DE GOOGLE FONTS )=====> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Original+Surfer&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ! <=====( ESTILOS CSS E ICONOS )=====> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ! <=====( CONTENEDOR TARJETA PRINCIPAL )=====> -->
+    <main class="container">
+        
+        <!-- ! <=====( ENCABEZADO Y MARCA )=====> -->
+        <header class="profile-header">
+            <div class="title-container">
+                <img src="assets/casino-pattern.svg" alt="Trébol Decorativo Izquierdo" class="title-clover">
+                <h1 class="title">Andys<br>De la suerte</h1>
+                <img src="assets/casino-pattern.svg" alt="Trébol Decorativo Derecho" class="title-clover">
+            </div>
+            <p class="subtitle">Tu cajera de confianza</p>
+        </header>
+
+        <!-- ! <=====( FRASE MOTIVADORA )=====> -->
+        <section class="card-section quote-card">
+            <i class="fa-solid fa-clover quote-icon" aria-hidden="true"></i>
+            <p class="quote-text">¡Que la fortuna gire a tu favor! Cargá con tu cajera de confianza y dejá que la suerte haga lo suyo.</p>
+        </section>
+
+        <!-- ! <=====( CANALES DE ATENCIÓN / WHATSAPP )=====> -->
+        <section class="card-section info-card">
+            <h2 class="section-title"><i class="fa-solid fa-headset" aria-hidden="true"></i> Para Cargar</h2>
+            <p class="card-subtitle">Hacé click en un canal para comunicarte:</p>
+
+            <div class="links-section">
+                <a href="https://wa.me/542236663618" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Principal
+                </a>
+                <a href="https://wa.me/542234254737" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Alternativo
+                </a>
+            </div>
+        </section>
+
+        <!-- ! <=====( ACCESO A LA PLATAFORMA )=====> -->
+        <section class="card-section platform-card">
+            <h2 class="section-title"><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Plataforma</h2>
+            <p class="card-subtitle">Ingresá para jugar directamente:</p>
+            
+            <a href="https://celuapuestas.fans/" target="_blank" rel="noopener" class="btn btn-platform">
+                <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i> Entrar a CeluApuestas
+            </a>
+        </section>
+
+        <!-- ! <=====( DIVISOR VISUAL DE SECCIÓN )=====> -->
+        <div class="section-divider">
+            <span><i class="fa-solid fa-clover" aria-hidden="true"></i></span>
+        </div>
+
+        <!-- ! <=====( RULETA INTERACTIVA )=====> -->
+        <section class="card-section roulette-section">
+            <h2 class="section-title"><i class="fa-solid fa-clover" aria-hidden="true"></i> Probá tu suerte</h2>
+            
+            <div class="roulette-container">
+                <div class="pointer" aria-hidden="true"></div>
+                <canvas id="rouletteCanvas" width="300" height="300"></canvas>
+            </div>
+            
+            <button id="spinBtn" class="btn btn-spin">
+                <i class="fa-solid fa-rotate" aria-hidden="true"></i> ¡GIRAR RULETA!
+            </button>
+        </section>
+
+    </main>
+
+    <!-- ! <=====( MODAL EMERGENTE DE RESULTADOS )=====> -->
+    <div id="resultModal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <h3 class="modal-title">¡Este es tu próximo destino!</h3>
+            <img id="modalGameImg" src="" alt="Juego seleccionado" class="modal-game-img">
+            <p id="modalGameText" class="modal-game-text">Juego seleccionado</p>
+            <button id="closeModalBtn" class="btn btn-close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- ! <=====( LÓGICA Y SCRIPTS )=====> -->
+    <script src="script.js"></script>
+</body>
+</html>
